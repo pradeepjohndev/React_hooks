@@ -7,7 +7,7 @@ export default function Parentprops(){
     return(
         <>
         <h1>parent componets</h1>
-            <Child onlineDevices={onlineDevices}/>
+            <Child onlineDevices={setStatus(onlineDevices)}/>
         </>
     )
 }

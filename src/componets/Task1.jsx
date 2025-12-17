@@ -5,13 +5,13 @@ export default function Task1() {
 
     useEffect(() => {
         let interval = setInterval(() => {
-            setCount(prev=>{
-                if(prev>=10){
+            setCount(prev => {
+                if (prev >= 10) {
                     clearInterval(interval);
                     console.log("limit")
                     return prev
                 }
-                return prev+1
+                return prev + 1
             });
         }, 2000);
 
