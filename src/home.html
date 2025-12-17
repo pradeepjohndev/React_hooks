@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>WebSocket Test</h1>
+
+  <script>
+    const ws = new WebSocket("ws://localhost:8080");
+
+    /* ws.onopen = () => {
+      console.log("Connected");
+      ws.send("Hello from HTML");
+    };
+
+    const pcCount = ws.clients.size;
+
+    document.getElementById("count").innerHTML = pcCount */
+
+      ws.onopen = () => {
+      console.log("Connected");
+      ws.send("Hello from HTML");
+    };
+
+    ws.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+
+      if (data.type === "CLIENT_COUNT") {
+        document.getElementById("count").innerText =
+          "Connected PCs: " + data.count;
+      }
+    };
+  </script>
+  
+  <h1 id="count"></h1>
+</body>
+</html>
