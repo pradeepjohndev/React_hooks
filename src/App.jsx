@@ -8,6 +8,8 @@ import ComponentA from './Content/ComponentA'
 // import Mycomponent from './Context/Mycomponent'
 // import { useState } from 'react'
 // import Theme from './Context/Theme'
+import Redu from './Reducer/redu'
+import Memo from './Reducer/Memo'
 
 
 function App() {
@@ -32,8 +34,10 @@ function App() {
 
       {/* <Theme.Provider value={{ theme, setTheme, toggleTheme }}>
         <Mycomponent />
-      </Theme.Provider> */}
-
+      </Theme.Provider> 
+      <Counter />
+      <Redu />*/}
+      <Memo />
 
     </>
   )
