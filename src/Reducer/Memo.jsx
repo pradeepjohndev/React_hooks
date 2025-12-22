@@ -1,24 +1,8 @@
-import { useState, useMemo } from "react";
-
-function slowFunction(number) {
-  console.log("Slow function running...");
-  let result = 0;
-
-  for (let i = 0; i < 1e8; i++) {
-    result += number;
-  }
-
-  return result;
-}
+import { useState } from "react";
 
 export default function Memo() {
-  const [count, setCount] = useState(0);
   const [dark, setDark] = useState(false);
 
-  const calculatedValue = useMemo(() => {
-    return slowFunction(count);
-  }, [count]);
-  
   const themeStyles = {
     backgroundColor: dark ? "black" : "white",
     color: dark ? "white" : "black",
@@ -28,12 +12,7 @@ export default function Memo() {
 
   return (
     <>
-      <h1>Count: {count}</h1>
-      <h2>Calculated Value: {calculatedValue}</h2>
-
-      <button onClick={() => setCount(count + 1)}>Increase Count</button>
       <button onClick={() => setDark(!dark)}>Toggle Theme</button>
-
       <div style={themeStyles}>
         Theme: {dark ? "Dark" : "Light"}
       </div>

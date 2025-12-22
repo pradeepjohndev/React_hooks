@@ -10,6 +10,9 @@ import ComponentA from './Content/ComponentA'
 // import Theme from './Context/Theme'
 import Redu from './Reducer/redu'
 import Memo from './Reducer/Memo'
+import Test from './Reducer/Test'
+import W3school from './Reducer/W3school'
+import Lenis_scroll from './Lenis_smooth/Lenis_scroll'
 
 
 function App() {
@@ -36,8 +39,11 @@ function App() {
         <Mycomponent />
       </Theme.Provider> 
       <Counter />
-      <Redu />*/}
+      <Redu />
       <Memo />
+      <Test val={false}/>
+      <W3school />*/}
+      <Lenis_scroll />
 
     </>
   )

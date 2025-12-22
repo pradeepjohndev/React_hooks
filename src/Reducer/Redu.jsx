@@ -20,9 +20,9 @@ export default function Redu() {
     <>
       <h1>{count < 0 ? 0 : count}</h1>
 
-      <button onClick={() => dispatch({ type: "inc" })}>+</button>
-      <button onClick={() => dispatch({ type: "dec" })}>-</button>
-      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
+      <button onClick={() => dispatch({ type: "red" })}>+</button>
+      <button onClick={() => dispatch({ type: "blue" })}>-</button>
+      <button onClick={() => dispatch({ type: "green" })}>Reset</button>
     </>
   );
 }
