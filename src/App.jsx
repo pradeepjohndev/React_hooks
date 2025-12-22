@@ -14,6 +14,8 @@ import Test from './Reducer/Test'
 import W3school from './Reducer/W3school'
 import Lenis_scroll from './Lenis_smooth/Lenis_scroll'
 import Smooth from './Lenis_smooth/Smooth'
+import { Route, Routes } from 'react-router-dom'
+import Home from './Lenis_smooth/Home'
 
 
 function App() {
@@ -44,9 +46,16 @@ function App() {
       <Memo />
       <Test val={false}/>
       <W3school />
-      <Lenis_scroll />*/}
+      <Lenis_scroll />
       <Smooth />
+      */}
+      {/* <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/Lenis_scroll' element={<Lenis_scroll />} />
+        <Route path='/Smooth' element={<Smooth />} />
+      </Routes> */}
 
+      <Home />
     </>
   )
 }

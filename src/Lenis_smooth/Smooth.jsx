@@ -14,6 +14,7 @@ export default function Smooth(){
             lenis.raf(time);
             requestAnimationFrame(raf);
             console.log("hi")
+
         }
 
         requestAnimationFrame(raf);
