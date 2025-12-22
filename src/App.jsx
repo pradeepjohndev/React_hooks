@@ -15,8 +15,14 @@ import W3school from './Reducer/W3school'
 import Lenis_scroll from './Lenis_smooth/Lenis_scroll'
 import Smooth from './Lenis_smooth/Smooth'
 import { Route, Routes } from 'react-router-dom'
-import Home from './Lenis_smooth/Home'
+// import Home from './Lenis_smooth/Home'
+// import Navbar from './Lenis_smooth/Navbar'
 
+import About from './Route/About'
+import Home from './Route/Home'
+import Navbar from './Route/Navbar'
+import Contact from './Route/Contact'
+import Product from './Route/Product'
 
 function App() {
   // const [theme, setTheme] = useState("light");
@@ -53,9 +59,19 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/Lenis_scroll' element={<Lenis_scroll />} />
         <Route path='/Smooth' element={<Smooth />} />
-      </Routes> */}
+      </Routes> 
 
-      <Home />
+      <Home />*/}
+
+      <Navbar />
+
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/About' element={<About />} />
+        <Route path='/Contact' element={<Contact />} />
+        <Route path='/Product/:id' element={<Product />} />
+
+      </Routes>
     </>
   )
 }
