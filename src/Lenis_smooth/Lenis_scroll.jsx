@@ -8,13 +8,16 @@ export default function Lenis_scroll() {
     lenisRef.current = new Lenis({
       duration: 1.2,
       smooth: true,
+      smoothWheel : true,
+      //easing smooth
+      easing: (t) => t * (2 - t),
     });
 
     const raf = (time) => {
       lenisRef.current.raf(time);
       requestAnimationFrame(raf)
     }
-
+    
     requestAnimationFrame(raf)
 
     return () => {

@@ -13,6 +13,7 @@ import Memo from './Reducer/Memo'
 import Test from './Reducer/Test'
 import W3school from './Reducer/W3school'
 import Lenis_scroll from './Lenis_smooth/Lenis_scroll'
+import Smooth from './Lenis_smooth/Smooth'
 
 
 function App() {
@@ -42,8 +43,9 @@ function App() {
       <Redu />
       <Memo />
       <Test val={false}/>
-      <W3school />*/}
-      <Lenis_scroll />
+      <W3school />
+      <Lenis_scroll />*/}
+      <Smooth />
 
     </>
   )
