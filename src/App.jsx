@@ -19,10 +19,17 @@ import { Route, Routes } from 'react-router-dom'
 // import Navbar from './Lenis_smooth/Navbar'
 
 import About from './Route/About'
-import Home from './Route/Home'
+// import Home from './Route/Home'
 import Navbar from './Route/Navbar'
 import Contact from './Route/Contact'
 import Product from './Route/Product'
+import Fruit from './Collapse/Fruit'
+import Collapse_able from './Collapse/Collapse_able'
+
+import Mycol from './Collapse/Mycol'
+import { Home, Calendar, Settings, LifeBuoy, Flag, Layers, StickyNote, LayoutDashboard } from "lucide-react"
+import Sidebar, { SidebarItem } from './Sidebar/Sidebar'
+import Dash from './Collapse/Dash'
 
 function App() {
   // const [theme, setTheme] = useState("light");
@@ -61,7 +68,7 @@ function App() {
         <Route path='/Smooth' element={<Smooth />} />
       </Routes> 
 
-      <Home />*/}
+      <Home />
 
       <Navbar />
 
@@ -72,6 +79,30 @@ function App() {
         <Route path='/Product/:id' element={<Product />} />
 
       </Routes>
+
+      <Collapse_able />
+      <Fruit />
+      <Mycol />
+      */}
+
+      <div className="flex h-screen overflow-hidden">
+        <Sidebar>
+          <SidebarItem icon={<Home size={20} />} text="Home" />
+          <SidebarItem icon={<LayoutDashboard size={20} />} text="Dashboard" />
+          <SidebarItem icon={<StickyNote size={20} />} text="Projects" />
+          <SidebarItem icon={<Calendar size={20} />} text="Calendar" />
+          <SidebarItem icon={<Layers size={20} />} text="Tasks" />
+          <SidebarItem icon={<Flag size={20} />} text="Reporting" />
+          <SidebarItem icon={<Settings size={20} />} text="Settings" />
+          <SidebarItem icon={<LifeBuoy size={20} />} text="Help" />
+        </Sidebar>
+
+        <div className="flex-1 overflow-y-auto">
+          <Dash />
+        </div>
+      </div>
+
+
     </>
   )
 }

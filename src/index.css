@@ -78,3 +78,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.react-collapse {
+  transition: height 300ms ease;
+}
+
+.react-collapse-content {
+  overflow: hidden;
+}
